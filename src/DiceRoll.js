@@ -25,10 +25,10 @@ export default class DiceRoll extends Component {
     return (
       <div className='roll-dice'>
         <div className='roll-dice-container'>
-          <Dice face={this.state.die1} />&nbsp;&nbsp;
+          <Dice face={this.state.die1} />&nbsp;&nbsp;&nbsp;&nbsp;
           <Dice face={this.state.die2} />
         </div>
-        <button onClick={this.roll} className='btn btn-dark'>Roll Dice!</button>
+        <button onClick={this.roll} className='btn btn-dark btn-lg mt-3'>Roll Dice!</button>
       </div>
     )
   }
