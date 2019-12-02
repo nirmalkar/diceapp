@@ -1,0 +1,11 @@
+.roll-dice-container{
+display: flex;
+justify-content: center;
+align-content: center;
+}
+
+
+.roll-dice button:hover{
+background: #48466d;
+border: none;
+}
