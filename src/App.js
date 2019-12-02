@@ -1,13 +1,12 @@
 import React from 'react';
-import Dice from './Dice'
+import DiceRoll from './DiceRoll'
 import './App.css';
 
 function App() {
 
   return (
     <div className="App">
-      <Dice face='one' />
-      <Dice face='one' />
+      <DiceRoll />
     </div>
   );
 }
