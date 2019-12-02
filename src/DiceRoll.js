@@ -25,7 +25,7 @@ export default class DiceRoll extends Component {
       <div>
         <Dice face={this.state.die1} />
         <Dice face={this.state.die2} />
-        <button onClick={this.roll} className='btn btn-light'>Roll Dice!</button>
+        <button onClick={this.roll} className='btn btn-dark'>Roll Dice!</button>
       </div>
     )
   }
