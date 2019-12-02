@@ -3,7 +3,7 @@ import Dice from './Dice'
 
 export default class DiceRoll extends Component {
   static defaultProps = {
-    // sides=['one', 'two', 'three', 'four', 'five', 'six']
+    sides: ['one', 'two', 'three', 'four', 'five', 'six']
   }
   constructor(props) {
     super(props)
@@ -12,6 +12,12 @@ export default class DiceRoll extends Component {
       die1: 'one',
       die2: 'one'
     }
+    this.roll = this.roll.bind(this)
+  }
+  roll() {
+    const forDieOne = this.props.sides[Math.floor(Math.random() * this.props.sides.length)]
+    const forDieTwo = this.props.sides[Math.floor(Math.random() * this.props.sides.length)]
+    this.setState({ die1: forDieOne, die2: forDieTwo })
   }
 
   render() {
@@ -19,7 +25,7 @@ export default class DiceRoll extends Component {
       <div>
         <Dice face={this.state.die1} />
         <Dice face={this.state.die2} />
-        <button>Roll Dice!</button>
+        <button onClick={this.roll} className='btn btn-light'>Roll Dice!</button>
       </div>
     )
   }
